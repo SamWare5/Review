@@ -40,7 +40,7 @@ for y in randomList:
     total = total + y
     length = length + 1
 average = total/length
-print("the final max value is", maxVal, "and the final min value is", minVal, " The total is", total, "the average is ", average, " and The length is", length)
+print("the final max value is", maxVal, "and the final min value is", minVal, "The total is", total, "the average is", average, "and The length is", length)
 
 #print("the sum of the list is ", sum(randomList))
 
