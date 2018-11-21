@@ -5,10 +5,11 @@ for college in mylist2:
 
 import random
 randomList = []
-# Add andom numbers to my list
+# Add random numbers to my list
 for x in range(10):
     ranNumber = random.randint(1, 100)
     randomList.append(ranNumber)
+
 
 #Dsplay the list (method 1)
 print(randomList)
@@ -19,13 +20,41 @@ for x in randomList:
 
 #minimum = min(randomList)
 #maximum = max(randomList)
-#print()
+print()
 #print("The minimum value is " , minimum, " and the maximum value is ", maximum)
 
-  for y in randomList:
-      if y > maxVal:
-          maxVal = y
-    print(maxVal)
+maxVal = randomList[0]
+minVal = randomList[0]
+total = 0
+cont = 1
+
+for y in randomList:
+    if y > maxVal:
+        maxVal = y
+#    print("maxVal = ", maxVal)
+
+    if y < minVal:
+        minVal = y
+
+#    print("minVal = ", minVal)
+    total = total + y
+    cont = cont + 1
+average = total/10
+print("the final max value is", maxVal, "and the final min value is ", minVal, "total is ", total, "the average is ", average)
+
+#print("the sum of the list is ", sum(randomList))
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
