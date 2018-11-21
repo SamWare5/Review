@@ -26,7 +26,7 @@ print()
 maxVal = randomList[0]
 minVal = randomList[0]
 total = 0
-cont = 1
+length = 0
 
 for y in randomList:
     if y > maxVal:
@@ -38,9 +38,9 @@ for y in randomList:
 
 #    print("minVal = ", minVal)
     total = total + y
-    cont = cont + 1
-average = total/10
-print("the final max value is", maxVal, "and the final min value is ", minVal, "total is ", total, "the average is ", average)
+    length = length + 1
+average = total/length
+print("the final max value is", maxVal, "and the final min value is", minVal, " The total is", total, "the average is ", average, " and The length is", length)
 
 #print("the sum of the list is ", sum(randomList))
 
