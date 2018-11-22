@@ -55,6 +55,3 @@ print("the final max value is", maxVal, "and the final min value is", minVal, "T
 
 
 
-
-
-
