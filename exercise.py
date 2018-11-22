@@ -38,7 +38,7 @@ for y in randomList:
 
 #    print("minVal = ", minVal)
     total = total + y
-    length = length + 1
+    length += 1
 average = total/length
 print("the final max value is", maxVal, "and the final min value is", minVal, "The total is", total, "the average is", average, "and The length is", length)
 
