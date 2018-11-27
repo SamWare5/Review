@@ -2,16 +2,19 @@ import random
 
 my_list = []
 for x in range(10):
-    my_list.append(random.randint(0, 100))
+        my_list.append(random.randint(1, 1000))
+print(my_list)
+
+
+print(my_list)
 max_of_list = my_list[0]
 min_of_list = my_list[0]
 sum_of_list = 0
 length_of_list = 0
 
-print(my_list)
-
 for x in my_list:
-    length_of_list +=1
+
+    length_of_list += 1
     sum_of_list += x
 
     if x > max_of_list:
