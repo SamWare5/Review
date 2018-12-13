@@ -3,9 +3,8 @@
 import random
 #from random import *#
 number = random.randint(1, 101)
-number = input("Please enter a number from 1 to 100 :")
-
-print("Choose a number between 1 and 100")
+#print("Choose a number between 1 and 100")
+number = int(input("Please enter a number from 1 to 100 :"))
 guessesTaken = 0
 while guessesTaken < 6:
     print('Take a guess.')
