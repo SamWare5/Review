@@ -1,5 +1,5 @@
 
-def make_album (artist_name, album_title, tracks =0) :
+def make_album (artist_name, album_title, tracks =0):
 
     if tracks:
         artist = {'artist': artist_name, 'title': album_title,'Tracks' :tracks }
@@ -26,7 +26,7 @@ print("\nPlease tell me your album :")
 
 while True:
 
-    artist_name = input("Arisst Name: ")
+    artist_name = input("Artist Name: ")
     if (artist_name == 'q'):
             break
 
