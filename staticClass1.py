@@ -11,9 +11,12 @@ class Item:
 
         Item.last_sku_used = self.sku
 
-    #static method
+    #static method sku
     def print_last_sku_used():
         print(Item.last_sku_used)
+    #static method item
+    def print_last_item_used():
+        print(Item.print_last_item_used)
 
 a1 = Item("fIRST item ", 2.00, True)
 a2 = Item('Second item ', 3.00, False)
