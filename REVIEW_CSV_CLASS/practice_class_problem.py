@@ -1,7 +1,10 @@
 import datetime
+
+
 class Worker():
 
     auto_id = 0
+
     def __init__(self, first_name: str, last_name: str, hire_date=datetime):
         self.__id = Worker.auto_id + 1
         Worker.auto_id = self.__id
@@ -9,13 +12,11 @@ class Worker():
         self.__last_name = last_name
         self.hire_date = hire_date
 
-
-
     def set_first_name(self, first_name):
         self.__first_name=first_name
 
     def set_last_name(self, last_name):
-        self.__last_name=last_name
+        self.__last_name = last_name
 
     def set_get_id(self):
         return self.__id
@@ -26,14 +27,15 @@ class Worker():
     def set_get_last_name(self):
         return self.__last_name
 
+
 class Employee(Worker):
 
-    def __init__(self, first_name:str, last_name:str, hire_date=datetime, salary=float):
+    def __init__(self, first_name: str, last_name: str, hire_date=datetime, salary=float):
         self.__salary = salary
         super().__init__(first_name, last_name, hire_date)
 
     def set_salary(self, salary):
-        self.__salary=salary
+        self.__salary = salary
 
     def get_salary(self):
         return self.__salary
@@ -41,27 +43,28 @@ class Employee(Worker):
     def get_hourly_salary(self):
         return self.__salary/261/8
 
+
 class Contractor(Worker):
 
-    def __init__(self, first_name:str, last_name:str, hire_date=datetime, hourly_salary=float):
+    def __init__(self, first_name: str, last_name: str, hire_date=datetime, hourly_salary=float):
         self.__hourly_salary = hourly_salary
         super().__init__(first_name, last_name, hire_date)
 
     def set_hourly_salary(self, hourly_salary):
-        self.__hourly_salary=hourly_salary
+        self.__hourly_salary = hourly_salary
 
     def get_hourly_salary(self):
         return self.__hourly_salary
 
+
 class Task():
     def __init__(self, id: int, name: str, description:str, assignedTo:Worker, duration_hours:float):
-        self.__id=id
-        self.__name=name
-        self.__description=description
-        self.__assignedTo=assignedTo
-        self.__duration_hours=duration_hours
+        self.__id = id
+        self.__name = name
+        self.__description = description
+        self.__assignedTo = assignedTo
+        self.__duration_hours = duration_hours
         self.__hours_completed = 0.0
-
 
     def set_id(self, id):
         self.__id = id
@@ -74,7 +77,6 @@ class Task():
 
     def set_assignedTo(self, assignedTo:Worker):
         self.__assignedTo=assignedTo
-
 
     def set_duration_hours(self, duration_hours):
         self.__duration_hours = duration_hours
@@ -99,6 +101,7 @@ class Task():
 
     def add_time(self, num_hours:float):
         self.__hours_completed += num_hours
+
 
 class Project():
     def __init__(self, id: int, name: str, hours_estimated: float):
@@ -137,7 +140,7 @@ class Project():
     def get_project_hours_completed(self):
         for task in self.__tasks:
             total_hours += task.get_hours_completed()
-        return total_hours
+            return total_hours
 
     def get_project_elapsed_cost(self):
         total_elapsed_cost = 0.00
@@ -145,7 +148,9 @@ class Project():
             total_elapsed_cost += task.get_hours_completed() * task.get_assignedTo().get_hourly_salary()
         return total_elapsed_cost
 
+
 emp = Employee("Sami", 'Bassata', None, 80000)
+
 contr = Contractor("Sami", "Bassata", None, 78)
 
 
