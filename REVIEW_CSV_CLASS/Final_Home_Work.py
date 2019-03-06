@@ -1,5 +1,4 @@
 import math
-import re
 
 
 class Shape:
@@ -17,12 +16,11 @@ class Shape:
 class Rectangle(Shape):
     __list_of_shape = []
 
-    def __init__(self,  width, length):
-        super().__init__()
+    def __int__(self, color, width, length):
+        super().__init__(color)
         self.__width = width
         self.__length = length
         self.__name = "Rectangle"
-
 
     def get_width(self):
         return self.__width
@@ -45,11 +43,10 @@ class Rectangle(Shape):
 
 class Square(Shape):
 
-    def __init__(self, side_length):
+    def __int__(self, side_length):
         super().__init__()
         self.__side_length = side_length
         self.__name = "Square"
-
 
     def get_side_length(self):
         return self.__side_length
@@ -66,11 +63,10 @@ class Square(Shape):
 
 class Circle(Shape):
 
-    def __init__(self, radius):
+    def __int__(self, radius):
         super().__init__()
         self.__radius = radius
         self.__name = "Circle"
-
 
     def get_radius(self):
         return self.__radius
@@ -85,25 +81,9 @@ class Circle(Shape):
         return self.math.pi.__self.radius*2
 
 
-class Shapes:
+sh = Shape('Red')
+print(sh.get_color())
 
-    def add_shape(self, new_shape: Shape):
-        self.__list_of_shape.append[new_shape]
+r = Rectangle('Blue', 1.5, 2.8)
 
-    def delete_shape(self, shape: Shape):
-        for x in self.__list_of_shape:
-            if re.match([shape], x):
-                self.__list_of_shape.remove(shape)
-
-
-r1 = Shape("Red")
-print(r1.get_color())
-print(r1.set_color('Blue'))
-r2 = Shape(10, 23)
-
-
-
-
-
-
-
+print(r.get_color())
